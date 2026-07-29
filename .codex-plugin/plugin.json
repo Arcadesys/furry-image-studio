@@ -1,0 +1,24 @@
+{
+  "name": "furry-image-studio",
+  "version": "0.1.0+codex.20260728235547",
+  "description": "Create, transform, and repair furry and anthro character images with reusable character and style profiles.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Furry Image Studio",
+    "shortDescription": "Generate and edit furry character images.",
+    "longDescription": "Furry Image Studio lets Codex use arbitrary user-added character profiles and rendering style profiles for furry, anthro, toon-in-real-world, anime, cartoon, and photoreal image work.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "image generation",
+      "image editing",
+      "character profiles",
+      "style profiles"
+    ],
+    "logo": "./assets/plugin-logo.png",
+    "defaultPrompt": "Help me create or transform a furry character image."
+  }
+}

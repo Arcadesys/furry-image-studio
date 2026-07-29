@@ -1,0 +1,20 @@
+{
+  "name": "furry-image-studio",
+  "interface": {
+    "displayName": "Furry Image Studio"
+  },
+  "plugins": [
+    {
+      "name": "furry-image-studio",
+      "source": {
+        "source": "local",
+        "path": "./plugins/furry-image-studio"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

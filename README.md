@@ -94,6 +94,23 @@ finger_count: toon-four
 python3 scripts/validate_profiles.py
 ```
 
+## External eval trace MCP
+
+`services/eval-mcp` is the private-artifact trace service used by applications
+such as ToonTok. It records checksum-backed immutable claims without writing
+customer images to this repository.
+
+```bash
+cd services/eval-mcp
+npm install
+EVAL_TRACE_SERVICE_TOKEN="a-long-private-service-token" npm start
+```
+
+Set `EVAL_TRACE_STORAGE_ROOT` to a private persistent volume in hosted
+environments. The service exposes `POST /mcp`, private short-lived artifact
+ingress, and `GET /health`. Its trace tools are `create_eval_claim`,
+`finalize_eval_claim`, and `get_eval_claim`.
+
 ## Create A Character
 
 ```bash

@@ -26,6 +26,26 @@ The expected entry is `furry-image-studio` from the
 `furry-image-studio` marketplace. No API key, MCP server, or companion app is
 required to use the public plugin.
 
+### Copy-paste prompt for ChatGPT Desktop
+
+Paste this into a ChatGPT Desktop task when you want its Codex harness to
+install the plugin for you:
+
+```text
+Install Furry Image Studio from its public Codex marketplace in this ChatGPT Desktop installation.
+
+Run:
+codex plugin marketplace add Arcadesys/furry-image-studio
+codex plugin add furry-image-studio@furry-image-studio
+codex plugin list
+
+Confirm that `furry-image-studio` is installed from the `furry-image-studio` marketplace. Do not configure the optional private eval MCP service or request an API key. When installation succeeds, tell me to start a new ChatGPT Desktop task so its Furry Image Studio skills are available.
+```
+
+In that new task, a user can simply ask for a furry image, a character profile,
+or a transformation of an uploaded photo. The harness will have the plugin's
+skills available to route the request.
+
 For a local checkout, use its absolute path as the marketplace root:
 
 ```bash

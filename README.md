@@ -5,7 +5,7 @@ transforming, and repairing furry, anthro, toon, and creature character images.
 It gives an image-capable harness reusable character and rendering-style
 profiles instead of baking one character or visual look into prompts.
 
-## Install in a Codex harness
+## ChatGPT Desktop — Codex plugin
 
 The public marketplace is this repository. A fresh Codex harness can install
 the published plugin with these two commands:
@@ -26,7 +26,14 @@ The expected entry is `furry-image-studio` from the
 `furry-image-studio` marketplace. No API key, MCP server, or companion app is
 required to use the public plugin.
 
-### Copy-paste prompt for ChatGPT Desktop
+### Use it in Desktop
+
+Attach the real photo and any character-reference images, then identify the
+person to transform and the requested character/style. The installed skills
+will use the character and style profiles to make a subject-only edit when
+`toon-in-real-world` is selected.
+
+### Copy-paste installation prompt
 
 Paste this into a ChatGPT Desktop task when you want its Codex harness to
 install the plugin for you:
@@ -42,9 +49,35 @@ codex plugin list
 Confirm that `furry-image-studio` is installed from the `furry-image-studio` marketplace. Do not configure the optional private eval MCP service or request an API key. When installation succeeds, tell me to start a new ChatGPT Desktop task so its Furry Image Studio skills are available.
 ```
 
-In that new task, a user can simply ask for a furry image, a character profile,
-or a transformation of an uploaded photo. The harness will have the plugin's
-skills available to route the request.
+## ChatGPT web and Android — Project companion
+
+This is a companion to the Codex plugin, not an Android app. It uses ordinary
+ChatGPT Images, so there is no separate photo-conversion service, API key, or
+per-conversion provider to configure. It works even when Custom GPT creation
+is unavailable.
+
+### ChatGPT web setup
+
+1. Create a **Furry Image Studio** ChatGPT Project.
+2. Add
+[`PROJECT_LIBRARY.md`](https://github.com/Arcadesys/furry-image-studio/blob/main/chatgpt/PROJECT_LIBRARY.md)
+as a project file.
+3. In Project settings, paste
+[`PROJECT_INSTRUCTIONS.md`](https://github.com/Arcadesys/furry-image-studio/blob/main/chatgpt/PROJECT_INSTRUCTIONS.md)
+into the project instructions.
+4. Start transformation chats inside that Project. It becomes a durable
+   character library: profiles are resolved by their name or alias in natural
+   language.
+
+### ChatGPT Android use
+
+Open that same Project in the Android app. Attach the real photo and any
+character-reference images, then say what you want naturally—for example,
+“Turn me into Moxie in Toon in Real World style.”
+[`MOBILE_QUICKSTART.md`](https://github.com/Arcadesys/furry-image-studio/blob/main/chatgpt/MOBILE_QUICKSTART.md)
+has the short setup and ready-to-use starters. When a new character is added or
+revised in the Project, ChatGPT returns a replacement library entry; paste it
+into the project file to make the exact canon durable.
 
 For a local checkout, use its absolute path as the marketplace root:
 

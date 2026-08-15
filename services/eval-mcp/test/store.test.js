@@ -13,7 +13,7 @@ const uuid = () => randomUUID();
 function input(overrides = {}) {
   const source = Buffer.from("source");
   const output = Buffer.from("output");
-  return { ownerId: uuid(), idempotencyKey: uuid(), jobId: uuid(), feedbackId: uuid(), revision: 1, prompt: "exact prompt", characterSnapshot: { name: "Moxie" }, referenceSnapshot: [{ contentHash: hash(source) }], providerSettings: { model: "gpt-image-1-mini" }, feedback: { rating: "up", note: "Keep the glasses" }, sources: [manifest(source)], output: manifest(output), _source: source, _output: output, ...overrides };
+  return { ownerId: uuid(), idempotencyKey: uuid(), jobId: uuid(), feedbackId: uuid(), revision: 1, prompt: "exact prompt", characterSnapshot: { name: "Testy Taupin" }, referenceSnapshot: [{ contentHash: hash(source) }], providerSettings: { model: "gpt-image-1-mini" }, feedback: { rating: "up", note: "Keep the character profile" }, sources: [manifest(source)], output: manifest(output), _source: source, _output: output, ...overrides };
 }
 
 test("records a checksum-backed bundle and is idempotent", async () => {

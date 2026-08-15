@@ -13,7 +13,7 @@
 1. Open the **Furry Image Studio** Project, then start a chat in it.
 2. Attach the real photo. Attach character-reference images too when you have
    them.
-3. Name the person and character naturally: for example, “Turn me into Moxie
+3. Name the person and character naturally: for example, “Turn me into Testy Taupin
    in Toon in Real World style.”
 4. If the result has one defect, ask for one repair rather than restarting the
    entire request.
@@ -30,15 +30,15 @@ complete library entry to paste into PROJECT_LIBRARY.md.
 
 ## Starters
 
-### Transform one person into Moxie
+### Transform one person into Testy Taupin
 
 ```text
-Transform only me, the person holding the phone, into Moxie in Toon in Real
+Transform only me, the person holding the phone, into Testy Taupin in Toon in Real
 World style. Keep the photo's crop, pose, hands on the phone, room, lighting,
 other people, objects, reflections, and visible text exactly as they are.
-Moxie needs her orange-red fur, cream markings, purple cat-eye glasses,
-side-swept auburn hair, and expressive five-finger hands. Do not redraw the
-scene or add a tail unless it can attach visibly and naturally.
+Testy Taupin uses warm taupe-brown fur, a cream muzzle and throat, small rounded
+ears, and expressive hybrid hands. Do not redraw the scene or add a tail unless
+it can attach visibly and naturally.
 ```
 
 ### Transform a chosen person into a supplied character
@@ -61,8 +61,8 @@ crop, character markings, hands, clothing, props, text, and every other person.
 ### Make a full-scene illustration
 
 ```text
-Create a new full-scene Storybook illustration of Moxie reading in a sunlit
-window seat. Preserve Moxie's orange-red fur, cream markings, purple cat-eye
-glasses, auburn side-swept hair, and soft confident expression. Keep the scene
-simple, warm, and readable at phone size.
+Create a new full-scene Storybook illustration of Testy Taupin reading in a
+sunlit window seat. Preserve Testy's warm taupe-brown fur, cream muzzle and
+throat, small rounded ears, and kind expression. Keep the scene simple, warm,
+and readable at phone size.
 ```

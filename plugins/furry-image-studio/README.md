@@ -73,7 +73,7 @@ into the project instructions.
 
 Open that same Project in the Android app. Attach the real photo and any
 character-reference images, then say what you want naturally—for example,
-“Turn me into Moxie in Toon in Real World style.”
+“Turn me into Testy Taupin in Toon in Real World style.”
 [`MOBILE_QUICKSTART.md`](https://github.com/Arcadesys/furry-image-studio/blob/main/chatgpt/MOBILE_QUICKSTART.md)
 has the short setup and ready-to-use starters. When a new character is added or
 revised in the Project, ChatGPT returns a replacement library entry; paste it
@@ -120,7 +120,7 @@ cannot silently land in only one copy.
 - `scripts/new_character.py` and `scripts/new_style.py` create valid profile
   starters; `scripts/validate_profiles.py` validates their frontmatter.
 
-Moxie and the included styles are examples, not limits. Users can add any
+Testy Taupin and the included styles are examples, not limits. Users can add any
 number of profiles. `toon-in-real-world` is intentionally constrained to a
 subject-only edit with the real background preserved.
 

@@ -17,6 +17,9 @@ Return an edited image that fixes one named defect while preserving all non-defe
 4. Use image editing, not pure generation.
 5. Prompt: repair only the defect; preserve character identity, pose, crop, background, lighting, clothing, expression, and all non-defective areas.
 6. Validate that the repair did not introduce new drift.
+7. When the user explicitly requested eval mode, use `record-eval-trace` after
+   accepting the repair. Pass the pre-repair image as source, the repaired local
+   file as output, and the exact repair prompt. Do not record ordinary repairs.
 
 ## Common Repair Targets
 

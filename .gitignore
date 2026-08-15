@@ -1,4 +1,18 @@
 tmp/
 test-outputs/
+.furry-image-studio/
+apps/trace-review/dist/
+apps/trace-review/node_modules/
+node_modules/
+playwright-report/
+test-results/
 .DS_Store
 __MACOSX/
+# Personal or generated image evidence stays local. Public examples must use
+# the reference-free Testy Taupin profile instead.
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+apps/trace-review-sites/generated/eval-data.json

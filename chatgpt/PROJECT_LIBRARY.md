@@ -2,45 +2,34 @@
 
 This is generated from the canonical character and style profiles. Upload it to the matching ChatGPT Project after each profile update.
 
-## Character profile: moxie
+## Character profile: testy-taupin
 
-Aliases: Moxie Fox, Mox
+Aliases: Testy, Taupin
 
 ---
-id: moxie
-display_name: Moxie
-species: red fox
-body_type: anthropomorphic fox woman
+id: testy-taupin
+display_name: Testy Taupin
+species: anthropomorphic taupe
+body_type: compact, friendly anthro character
 default_style: toon-in-real-world
-paw_style: human-like-hands
-finger_count: five
+paw_style: hybrid-hands
+finger_count: auto
 required_traits:
-  - warm orange-red fur
-  - cream-white muzzle, cheeks, throat, chest accents, inner ear tufts, and tail tip
-  - large pointed fox ears with darker tips
-  - amber or golden eyes with expressive dark brows
-  - black fox nose
-  - purple cat-eye glasses
-  - side-swept auburn-brown hair with muted mauve or rose highlights
-  - soft confident expression
+  - warm taupe-brown fur with a cream muzzle and throat
+  - small rounded ears and a soft, readable silhouette
+  - kind expression and simple, unbranded clothing when clothing is requested
 avoid:
-  - generic fox design
-  - photorealistic mask glued over a human face
+  - distinctive real-person likenesses
+  - named-character accessories or markings
   - extra tails, ears, fingers, or limbs
-  - warped glasses
-  - horror-adjacent muzzle or teeth
-reference_images:
-  - references/face.jpg
-  - references/body.jpg
+reference_images: []
 ---
 
-# Moxie
+# Testy Taupin
 
-Use `face.jpg` for face shape, glasses, hair, fur color, eye color, muzzle, and soft texture cues.
-
-Use `body.jpg` for anthro proportions, tail, markings, body language, and full-character design.
-
-Moxie defaults to human-like expressive five-finger hands with orange fur. Use hybrid/full paw treatment or toon-four hands only when the user asks.
+Testy Taupin is the generic, reference-free example profile. Use it for
+documentation and smoke checks only; it must not encode a real person's
+appearance, private reference image, or user preference.
 
 ## Style profile: anime
 

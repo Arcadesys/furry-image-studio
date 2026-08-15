@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "minimumCases": 4,
+  "minimumCriterionCoverage": 0.75,
+  "maximumMeanAbsoluteError": 0.75,
+  "minimumWithinOneRate": 0.9,
+  "minimumPassFailAgreement": 0.85,
+  "minimumCasePassAgreement": 0.75,
+  "minimumManualPinLocationRecall": 0.7,
+  "minimumPinCategoryAgreement": 0.6,
+  "pinMatchRadius": 0.12
+}

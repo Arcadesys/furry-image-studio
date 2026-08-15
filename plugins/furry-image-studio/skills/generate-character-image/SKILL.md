@@ -17,6 +17,11 @@ Return a new generated image that follows one character profile, one style profi
 4. Compose a prompt with image roles, character lock, style lock, scene, composition, and avoid list.
 5. Use pure generation unless the user provided an image to edit or preserve.
 6. Validate for character identity, style match, anatomy, accessories, and readable focal point.
+7. When the user explicitly requested eval mode and generation used a visual
+   character, pose, or composition reference, use `record-eval-trace` after
+   accepting the result. Pass that actual reference as source, the generated
+   local file as output, and the exact composed image prompt. Never use the
+   output as its own source.
 
 ## Prompt Skeleton
 

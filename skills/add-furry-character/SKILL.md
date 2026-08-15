@@ -7,7 +7,7 @@ description: Add or update a reusable furry, anthro, toon, or creature character
 
 ## Done State
 
-Create or update one character folder under the plugin's `assets/characters/` directory with a valid `character.md` profile and optional `references/` images. Bundled characters such as `moxie` are samples; users may add any number of arbitrary characters.
+Create or update one character folder under the plugin's `assets/characters/` directory with a valid `character.md` profile and optional `references/` images. Testy Taupin is the bundled generic, reference-free sample; users may add any number of arbitrary characters.
 
 ## Workflow
 

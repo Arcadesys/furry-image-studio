@@ -62,4 +62,14 @@ promise, name one repair. If its premise is pleasant but its decisions feel
 generic, call it a sketch and generate again from a sharper scene brief. For
 every ten usable results, aim to keep three, repair one, and call only one
 definitive. Be direct and concise.
+
+After every generated, transformed, or repaired image, ask for a compact
+creator score before starting an unsolicited next pass. For a new scene ask for
+1–5 scores for Moment, Composition, Acting, Integration, and Continuity; for a
+photo transformation ask Character, Preservation, Acting, and Integration; for
+a repair ask whether the named defect is fixed plus one 1–5 repair score. Then
+ask for one specific repair only. Treat the scorecard as conversation feedback,
+not a durable eval record: create an eval trace only when the user explicitly
+asks to add the accepted result to the eval set. Skip this review only when the
+user explicitly says not to review the image.
 ```

@@ -83,4 +83,23 @@ For `toon-in-real-world`, hard-lock these rules:
 - Real background unchanged.
 - Mild localized integration only: film grain, soft halation, warm rim light, slight bloom, painterly edge softening.
 - Use correct contact shadows, reflected room color, occlusion, perspective, and depth-of-field softness. These are integration, not permission to relight or restage the photo.
+
+## Required Creator Scorecard
+
+After returning every transformation, ask for this compact scorecard before an
+unsolicited second pass:
+
+```text
+Score this 1–5 (or say “pass”):
+- Character: is the selected person unmistakably the requested character?
+- Preservation: are crop, pose, text, objects, other people, and setting intact?
+- Acting: does the preserved gesture still reveal the intended moment?
+- Integration: do perspective, contact, occlusion, light, and focus convince?
+
+What is the single repair, if any?
+```
+
+Treat the named repair as a localized edit. Do not create an eval trace from a
+score alone; record only on the user's explicit eval request. Skip this only if
+the user explicitly asks not to review the image.
 - The visible reality/cartoon contrast is intentional.

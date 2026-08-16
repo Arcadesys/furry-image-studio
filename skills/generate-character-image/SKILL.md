@@ -85,3 +85,25 @@ Before accepting a generated image, answer these five checks explicitly:
 If any answer is no, do not call the image definitive. Repair one named fault
 when the frame is otherwise strong; otherwise log it as a sketch and regenerate
 from a sharper scene brief.
+
+## Required Creator Scorecard
+
+After returning every generated image, ask the creator to score it before
+starting an unsolicited second pass. Use this compact, copyable prompt:
+
+```text
+Score this 1–5 (or say “pass”):
+- Moment: does one emotionally specific beat read first?
+- Composition: does the eye land where it should and return there?
+- Acting: do the characters behave, not merely emote?
+- Integration: do perspective, contact, occlusion, light, and focus convince?
+- Continuity: is the character unmistakably themselves?
+
+What is the single repair, if any?
+```
+
+Use the named repair as the next repair pass; do not guess a redesign from a
+low score. The scorecard is conversational feedback, not an eval trace. Record
+an immutable eval only when the user explicitly asks for eval mode or for the
+accepted result to be added to the eval set. Skip the scorecard only when the
+user explicitly asks not to review the image.

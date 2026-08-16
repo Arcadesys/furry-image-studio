@@ -71,6 +71,20 @@ Every new run receives this seven-part 1–5 rubric, with 4 as the pass line:
 For a generated scene, score source preservation against the actual visual
 reference and requested composition—not an invented source photo.
 
+## Creator scorecard after every image
+
+Every image-making skill asks the creator for a compact score before an
+unsolicited next pass. A new scene uses Moment, Composition, Acting,
+Integration, and Continuity; a photo edit uses Character, Preservation,
+Acting, and Integration; a repair uses “did it fix the named defect?” plus one
+repair score. Each is scored 1–5, followed by one requested repair at most.
+
+These scores guide immediate repair and reveal which rubric criteria deserve
+more weight or clearer definitions. They are **not** automatically saved as an
+immutable eval trace: record only an accepted result the creator explicitly
+asks to add to the eval set, with actual source, output, and exact prompt
+evidence.
+
 ## Small, useful eval set
 
 Start with one claim and four to eight traces, not a grab bag. A good first

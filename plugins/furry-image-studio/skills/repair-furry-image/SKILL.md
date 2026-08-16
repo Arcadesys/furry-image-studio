@@ -58,3 +58,11 @@ The named defect.
 Avoid:
 Full-image redraw, new character design, new objects, fake text, extra anatomy, pose changes, background changes, and unrelated beautification.
 ```
+
+## Required Creator Scorecard
+
+After every repaired image, ask: “Did this fix the named defect? Score the
+repair 1–5, and name one remaining defect only if another pass is wanted.” Do
+not treat a low score as permission to redraw the whole image. A repair score
+becomes durable eval evidence only when the user explicitly asks to record the
+accepted result.

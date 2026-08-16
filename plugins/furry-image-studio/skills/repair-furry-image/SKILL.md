@@ -35,6 +35,7 @@ Return an edited image that fixes one named defect while preserving all non-defe
 - Background drift: restore source background; do not redraw or beautify.
 - Style drift: reapply only the style profile; do not change character identity.
 - Generic species drift: reassert required character traits and references.
+- Pasted-on toon: repair only the local contact shadow, reflected environmental color, perspective, depth softness, or real-object occlusion that is wrong; preserve the intentional cartoon/photo contrast.
 
 ## Repair Prompt
 
@@ -57,3 +58,11 @@ The named defect.
 Avoid:
 Full-image redraw, new character design, new objects, fake text, extra anatomy, pose changes, background changes, and unrelated beautification.
 ```
+
+## Required Creator Scorecard
+
+After every repaired image, ask: “Did this fix the named defect? Score the
+repair 1–5, and name one remaining defect only if another pass is wanted.” Do
+not treat a low score as permission to redraw the whole image. A repair score
+becomes durable eval evidence only when the user explicitly asks to record the
+accepted result.

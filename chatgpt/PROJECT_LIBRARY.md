@@ -31,6 +31,88 @@ Testy Taupin is the generic, reference-free example profile. Use it for
 documentation and smoke checks only; it must not encode a real person's
 appearance, private reference image, or user preference.
 
+## Character profile: moxie
+
+Aliases: Mox
+
+---
+id: moxie
+display_name: Moxie
+species: orange-red fox
+body_type: expressive hybrid anthro fox
+default_style: toon-in-real-world
+paw_style: hybrid-hands
+finger_count: auto
+pronouns: she/her
+personality_tags:
+  - observant
+  - wry
+  - composed until delighted
+required_traits:
+  - orange-red fox fur with a cream muzzle and golden eyes
+  - purple cat-eye glasses with correctly aligned frames and lenses
+  - swept auburn-to-mauve hair
+  - dark-brown to near-black natural fox-fur socks from each paw's digits to midway between wrist and elbow, with a clean organic fur boundary
+  - matching dark-brown natural fur socks on the lower legs when visible
+  - hybrid anthro hands with four or five pose-coherent visible digits, small neat claws, and believable object contact
+avoid:
+  - orange fur on the hands or paws
+  - fabric gloves, cuffs, seams, bracelets, or any literal clothing interpretation of the dark fur markings
+  - human nails, oversized claws, pawpads on the backs of hands, or incoherent digit counts
+  - warped purple glasses, generic fox styling, missing swept hair, or a mascot-head mask effect
+  - changed source crop, aspect ratio, clothing graphics, pose, setting, or visible object placement in a photo transformation
+reference_images: []
+---
+
+# Moxie
+
+Moxie is an orange-red fox with a cream muzzle, golden eyes, swept
+auburn-to-mauve hair, and purple cat-eye glasses. Her dark brown/near-black
+paw-and-forearm socks are natural fur markings—not gloves—and run from the
+digits to midway between wrist and elbow. Keep short neat claws, coherent
+four-or-five-digit hybrid hands, and real object contact.
+
+Her characteristic acting is observant and wry: an ear tracks trouble while
+her face stays composed; a tail finds a chair leg; a delayed laugh arrives just
+after everyone else's. In a photo edit, preserve the original crop, pose,
+clothing graphics, setting, and objects. Integrate with contact shadow,
+perspective, occlusion, reflected color, and depth behavior while retaining
+the intentional 2D-toon/real-photo contrast.
+
+## Style profile: arcade-toon-documentary
+
+---
+id: arcade-toon-documentary
+display_name: Arcade Toon Documentary
+default_scope: full-image
+allowed_scopes:
+  - subject-only
+  - full-image
+background_policy: match-mode
+rendering:
+  - visibly drawn 2D toons with confident varied black-to-dark linework, large readable eyes, compact muzzles, simple noses, and clean cheek shapes
+  - limited cel shading: one local shadow family plus sparse reflected environmental color; no airbrushed plastic rendering
+  - species-specific silhouettes, expressive paws, ears, and tails, plus clothing cuts that read at a glance
+  - real objects correctly occlude and support the characters through perspective, contact shadows, real grips, and source-appropriate focus softness
+preserve:
+  - character identity and required traits
+  - one emotionally specific focal moment
+  - a readable foreground, middle ground, and background
+avoid:
+  - a collection of equally cute figures with no protagonist
+  - generic happy, worried, or surprised posing in place of character-specific behavior
+  - photoreal toon rendering, uniform line weight, muddy shading, generic species drift, floating props, or missing occlusion
+  - dense incidental action that competes with the main beat
+---
+
+# Arcade Toon Documentary
+
+Use for authored scenes where 2D toons inhabit ordinary human spaces. Build one
+reportable moment: a protagonist, the exact change that just occurred, a
+visible want, a secondary reaction, and a first eye landing point. Stage all
+other figures and quiet space to conduct attention back to that beat. The goal
+is a lived-in Toontown observed with intent, not a populated backdrop.
+
 ## Style profile: anime
 
 ---

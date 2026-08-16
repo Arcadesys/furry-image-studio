@@ -23,9 +23,11 @@ const supportedImageExtensions = new Set([".png", ".jpg", ".jpeg"]);
 export const defaultRubric = [
   { id: "target-selection", label: "Target selection", passThreshold: 4 },
   { id: "character-fidelity", label: "Character fidelity", passThreshold: 4 },
-  { id: "background-preservation", label: "Background preservation", passThreshold: 4 },
-  { id: "paws-anatomy", label: "Paws / anatomy", passThreshold: 4 },
-  { id: "lighting-color", label: "Lighting / color", passThreshold: 4 },
+  { id: "story-beat", label: "Story beat", passThreshold: 4 },
+  { id: "composition-hierarchy", label: "Composition hierarchy", passThreshold: 4 },
+  { id: "character-acting", label: "Character-specific acting", passThreshold: 4 },
+  { id: "physical-integration", label: "Physical integration", passThreshold: 4 },
+  { id: "source-preservation", label: "Source preservation", passThreshold: 4 },
 ];
 
 function sha256(value) {

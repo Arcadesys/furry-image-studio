@@ -17,8 +17,8 @@ Return an edited image where only the selected subject is transformed into the s
 4. If multiple people are plausible targets and the user did not identify one, ask which subject to transform.
 5. Use image editing, not pure generation.
 6. Label every input image role: edit target, character reference, style reference, pose reference, or composition reference.
-7. Compose the prompt from: use case, primary goal, image roles, character lock, style lock, preserve, change only, avoid.
-8. Validate the result against the source image and selected profiles. Regenerate if the background, crop, text, objects, or other people drift.
+7. Compose the prompt from: use case, primary goal, image roles, character lock, style lock, physical-integration requirements, preserve, change only, avoid.
+8. Validate the result against the source image and selected profiles. Regenerate if the background, crop, text, objects, other people, perspective, occlusion, or object contact drift.
 9. When the user explicitly requested eval mode, use `record-eval-trace` after
    accepting the result. Pass the original photo as source, the generated local
    file as output, and the exact composed image prompt. Do not record ordinary
@@ -48,6 +48,14 @@ Original crop, aspect ratio, camera angle, background, lighting direction, shado
 Change only:
 The selected subject's species/character design and necessary localized integration effects.
 
+Physical integration:
+Match camera height and perspective. Add only localized contact shadows and
+reflected environmental color needed to make the drawn character occupy the
+photo. Respect real-object occlusion: a glass, table, chair, controller, or
+foreground object must pass in front of or support the character where the
+source geometry requires it. Match the source depth of field; do not sharpen a
+background subject into the focal plane.
+
 Avoid:
 Scene redraw, background cleanup, fake text, new objects, extra limbs, extra tails, extra ears, warped glasses, generic fursona drift, horror anatomy, mascot-head mask effect, and full-scene restyle unless explicitly requested by an allowed style scope.
 ```
@@ -74,4 +82,24 @@ For `toon-in-real-world`, hard-lock these rules:
 - Subject-only transformation.
 - Real background unchanged.
 - Mild localized integration only: film grain, soft halation, warm rim light, slight bloom, painterly edge softening.
+- Use correct contact shadows, reflected room color, occlusion, perspective, and depth-of-field softness. These are integration, not permission to relight or restage the photo.
+
+## Required Creator Scorecard
+
+After returning every transformation, ask for this compact scorecard before an
+unsolicited second pass:
+
+```text
+Score this 1–5 (or say “pass”):
+- Character: is the selected person unmistakably the requested character?
+- Preservation: are crop, pose, text, objects, other people, and setting intact?
+- Acting: does the preserved gesture still reveal the intended moment?
+- Integration: do perspective, contact, occlusion, light, and focus convince?
+
+What is the single repair, if any?
+```
+
+Treat the named repair as a localized edit. Do not create an eval trace from a
+score alone; record only on the user's explicit eval request. Skip this only if
+the user explicitly asks not to review the image.
 - The visible reality/cartoon contrast is intentional.

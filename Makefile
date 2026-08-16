@@ -1,9 +1,15 @@
-.PHONY: test plugin-test service-test
+.PHONY: test plugin-test eval-recorder-test judge-test service-test
 
-test: plugin-test service-test
+test: plugin-test eval-recorder-test judge-test service-test
 
 plugin-test:
 	python3 scripts/test_plugin.py
+
+eval-recorder-test:
+	npm run eval:record:test
+
+judge-test:
+	npm run judge:test
 
 service-test:
 	npm ci --prefix services/eval-mcp

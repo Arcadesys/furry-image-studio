@@ -18,8 +18,9 @@ Create or update one character folder under the plugin's `assets/characters/` di
 5. Optionally copy from `assets/characters/_template/character.md` for a hand-authored profile.
 6. Put reference images in `assets/characters/<id>/references/`.
 7. List reference image paths in `reference_images`.
-8. Run `scripts/validate_profiles.py`.
-9. If required traits or references are ambiguous, leave clear profile placeholders instead of inventing canon.
+8. For an important recurring character, add the construction block below; attach a turnaround/model sheet when available.
+9. Run `scripts/validate_profiles.py`.
+10. If required traits, palette values, or references are ambiguous, leave clear profile placeholders instead of inventing canon.
 
 ## Character Contract
 
@@ -55,6 +56,26 @@ personality_tags:
   - confident
   - gentle
 ```
+
+## Continuity Block for Recurring Characters
+
+Profiles are not merely ingredient lists. For a character expected to recur,
+add a concise body section covering:
+
+- **Model sheet / turnaround:** front, three-quarter, side, and back reference
+  paths, or an explicit note that references are still needed.
+- **Palette:** exact sampled or approved color names/values for fur, markings,
+  eyes, hair, accessories, and clothing defaults. Never invent exact values.
+- **Construction:** head-to-body proportion, eye and muzzle construction,
+  nose, paw/hand construction, and species silhouette.
+- **Wardrobe silhouettes:** recurring clothing shapes and the accessories that
+  must read even in a small image.
+- **Acting library:** five characteristic expressions and five characteristic
+  gestures written as observable behavior, not labels such as “happy.”
+- **Never list:** the concrete identity failures the generator must avoid.
+
+Character identity still wins over rendering style. Reference images and
+approved palette values are the source of truth when they exist.
 
 ## Paw Style
 

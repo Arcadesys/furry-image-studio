@@ -16,7 +16,7 @@ PACKAGE = REPOSITORY_ROOT / "plugins" / "furry-image-studio"
 if not PACKAGE.is_dir():
     PACKAGE = PLUGIN_ROOT
 MARKETPLACE = REPOSITORY_ROOT / ".agents" / "plugins" / "marketplace.json"
-RELEASE_PATHS = ("README.md", ".codex-plugin", "assets", "scripts", "skills")
+MIRRORED_RELEASE_PATHS = ("README.md", ".codex-plugin", "assets", "skills")
 
 
 def files_under(directory: pathlib.Path) -> dict[pathlib.Path, bytes]:
@@ -51,7 +51,7 @@ class PluginReleaseContractTests(unittest.TestCase):
     def test_authoring_copy_matches_the_release_package(self) -> None:
         if PLUGIN_ROOT == PACKAGE:
             self.skipTest("standalone installed plugin has no separate authoring copy")
-        for relative_path in RELEASE_PATHS:
+        for relative_path in MIRRORED_RELEASE_PATHS:
             source = REPOSITORY_ROOT / relative_path
             release = PACKAGE / relative_path
             self.assertTrue(source.exists(), source)
@@ -60,6 +60,31 @@ class PluginReleaseContractTests(unittest.TestCase):
                 self.assertEqual(source.read_bytes(), release.read_bytes(), relative_path)
             else:
                 self.assertEqual(files_under(source), files_under(release), relative_path)
+
+    def test_eval_recorder_has_matching_development_and_installed_entry_points(self) -> None:
+        """The root wrapper delegates; the installed package owns the implementation."""
+        if PLUGIN_ROOT == PACKAGE:
+            self.skipTest("standalone installed plugin has no separate authoring copy")
+        wrapper = REPOSITORY_ROOT / "scripts" / "record_eval_run.mjs"
+        implementation = PACKAGE / "scripts" / "record_eval_run.mjs"
+        wrapper_text = wrapper.read_text(encoding="utf-8")
+        self.assertIn("../plugins/furry-image-studio/scripts/record_eval_run.mjs", wrapper_text)
+        self.assertIn("export async function recordEvalRun", implementation.read_text(encoding="utf-8"))
+        root_help = subprocess.run(
+            ["node", "scripts/record_eval_run.mjs", "--help"],
+            cwd=REPOSITORY_ROOT,
+            capture_output=True,
+            text=True,
+        )
+        package_help = subprocess.run(
+            ["node", "scripts/record_eval_run.mjs", "--help"],
+            cwd=PACKAGE,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(root_help.returncode, 0, root_help.stderr)
+        self.assertEqual(package_help.returncode, 0, package_help.stderr)
+        self.assertEqual(root_help.stdout, package_help.stdout)
 
     def test_skills_have_required_metadata(self) -> None:
         for skill in sorted((PACKAGE / "skills").glob("*/SKILL.md")):

@@ -104,10 +104,13 @@ services/eval-mcp/                 -> optional private trace service
 ```
 
 `plugins/furry-image-studio/` is the release package named by the marketplace.
-The root `assets/`, `skills/`, `scripts/`, manifest, and README are the
-canonical authoring copy and must match their counterparts in that package.
-`python3 scripts/test_plugin.py` enforces that release boundary, so a change
-cannot silently land in only one copy.
+The root `assets/`, `skills/`, manifest, and README are the canonical authoring
+copy and must match their counterparts in that package. The eval recorder is
+the intentional exception: the root `scripts/record_eval_run.mjs` is a thin
+development wrapper, while the release package contains the self-contained
+implementation used by an installed plugin. `python3 scripts/test_plugin.py`
+verifies that the mirrored files stay identical and that both recorder entry
+points expose the same CLI, so a change cannot silently split their behavior.
 
 ### Profiles and skills
 
@@ -161,8 +164,26 @@ npm test --prefix services/eval-mcp
 
 The Python check validates marketplace wiring, the plugin manifest, every
 skill's frontmatter, all character/style profiles, helper-script entry points,
-and the source-to-release synchronization. GitHub Actions runs the same checks
-on pushes and pull requests.
+the mirrored release files, and the eval recorder's development/installed CLI
+contract. GitHub Actions runs the same checks on pushes and pull requests.
+
+## Evaluate accepted images consistently
+
+Furry Image Studio evaluates existing, accepted source/output pairs; it never
+generates an image just to make an eval. From this checkout, use:
+
+```bash
+npm run eval:record -- --repo "$PWD" --source <actual-input.png> \
+  --output <accepted-output.png> --title "<claim>" \
+  --prompt-file <exact-sent-prompt.txt> --character <id> --style <id>
+```
+
+The recorder creates an immutable, checksum-backed review run. Human reviewers
+score character fidelity plus story beat, composition hierarchy,
+character-specific acting, physical integration, and source preservation before
+the blind Codex judge is calibrated. See
+[the eval protocol](evals/EVAL_PROTOCOL.md) for the small-set recipe, evidence
+rules, and review-to-judge flow.
 
 ## Create a character
 

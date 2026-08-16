@@ -35,6 +35,7 @@ Return an edited image that fixes one named defect while preserving all non-defe
 - Background drift: restore source background; do not redraw or beautify.
 - Style drift: reapply only the style profile; do not change character identity.
 - Generic species drift: reassert required character traits and references.
+- Pasted-on toon: repair only the local contact shadow, reflected environmental color, perspective, depth softness, or real-object occlusion that is wrong; preserve the intentional cartoon/photo contrast.
 
 ## Repair Prompt
 

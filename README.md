@@ -14,6 +14,13 @@ profiles instead of baking one character or visual look into prompts.
 - Optional private MCP evaluation service with checksum-backed trace artifacts
 - Human evaluation, calibrated model judging, and regression workflows for accepted image pairs
 
+### Architecture
+
+```text
+User + references → Skill → Character profile + Style profile → Image tool → Human review
+Accepted source/output pair → Eval recorder → Private trace store → Regression evidence
+```
+
 
 ## ChatGPT Desktop — Codex plugin
 

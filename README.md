@@ -1,14 +1,21 @@
 # Furry Image Studio
 
-Furry Image Studio is a Codex / ChatGPT Desktop plugin for generating,
-transforming, and repairing furry, anthro, toon, and creature character images.
-It gives an image-capable harness reusable character and rendering-style
-profiles instead of baking one character or visual look into prompts.
+**Reusable AI character-transformation tools for Codex and ChatGPT.**
+
+Furry Image Studio is an installable Codex / ChatGPT Desktop plugin that turns
+furry, anthro, toon, and creature image workflows into reusable skills with
+character-identity profiles, rendering-style profiles, validation, and
+multimodal evaluation.
+
+Character identity stays separate from rendering style, so the same character
+can move across visual treatments without losing canon. The skills support new
+image generation, selected-subject transformation, and localized repair.
 
 ## Engineering highlights
 
-- Installable Codex plugin with reusable skills, character profiles, and rendering profiles
-- Explicit separation between character identity and visual style
+- Installable Codex plugin with reusable image-workflow skills
+- Canon-preserving separation between character identity and rendering style
+- Generation, selected-subject transformation, and localized repair workflows
 - Canonical authoring files mirrored into a verified release package
 - Profile validation, CI, and release-contract tests that prevent package drift
 - Optional private MCP evaluation service with checksum-backed trace artifacts
@@ -17,10 +24,9 @@ profiles instead of baking one character or visual look into prompts.
 ### Architecture
 
 ```text
-User + references → Skill → Character profile + Style profile → Image tool → Human review
+User + references → Skill → Identity profile + Style profile → Generate / transform / repair → Human review
 Accepted source/output pair → Eval recorder → Private trace store → Regression evidence
 ```
-
 
 ## ChatGPT Desktop — Codex plugin
 

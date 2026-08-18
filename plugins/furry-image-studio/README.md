@@ -28,6 +28,24 @@ User + references → Skill → Identity profile + Style profile → Generate / 
 Accepted source/output pair → Eval recorder → Private trace store → Regression evidence
 ```
 
+## Why this exists
+
+Furry identity is deeply visual, but seeing yourself as your fursona can require
+access to commissioned artwork or a fursuit—both meaningful forms of expression
+that can also be expensive.
+
+Furry Image Studio explores a more accessible entry point: a small convention
+photo booth where someone can take a picture and receive an image of themselves
+as their character—preserving the person, pose, clothing, and moment while
+transforming their appearance.
+
+The goal is not to replace artists, commissions, or fursuits. It is to give
+more people an immediate and affordable way to participate, recognize
+themselves in their character, and leave the convention with a personal
+artifact.
+
+**Snap a photo. Become your fursona. Take the moment home.**
+
 ## ChatGPT Desktop — Codex plugin
 
 The public marketplace is this repository. A fresh Codex harness can install

@@ -5,6 +5,16 @@ transforming, and repairing furry, anthro, toon, and creature character images.
 It gives an image-capable harness reusable character and rendering-style
 profiles instead of baking one character or visual look into prompts.
 
+## Engineering highlights
+
+- Installable Codex plugin with reusable skills, character profiles, and rendering profiles
+- Explicit separation between character identity and visual style
+- Canonical authoring files mirrored into a verified release package
+- Profile validation, CI, and release-contract tests that prevent package drift
+- Optional private MCP evaluation service with checksum-backed trace artifacts
+- Human evaluation, calibrated model judging, and regression workflows for accepted image pairs
+
+
 ## ChatGPT Desktop — Codex plugin
 
 The public marketplace is this repository. A fresh Codex harness can install

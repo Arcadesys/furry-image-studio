@@ -17,9 +17,10 @@ Return an edited image that fixes one named defect while preserving all non-defe
 4. Use image editing, not pure generation.
 5. Prompt: repair only the defect; preserve character identity, pose, crop, background, lighting, clothing, expression, and all non-defective areas.
 6. Validate that the repair did not introduce new drift.
-7. When the user explicitly requested eval mode, use `record-eval-trace` after
-   accepting the repair. Pass the pre-repair image as source, the repaired local
-   file as output, and the exact repair prompt. Do not record ordinary repairs.
+7. Automatically use `record-eval-trace` after every produced repair. Pass the
+   immediate pre-repair image as source, the repaired local file as output, and
+   the exact repair prompt. Return the trace receipt with the image; never
+   silently skip a recording failure.
 
 ## Common Repair Targets
 
@@ -63,6 +64,6 @@ Full-image redraw, new character design, new objects, fake text, extra anatomy, 
 
 After every repaired image, ask: “Did this fix the named defect? Score the
 repair 1–5, and name one remaining defect only if another pass is wanted.” Do
-not treat a low score as permission to redraw the whole image. A repair score
-becomes durable eval evidence only when the user explicitly asks to record the
-accepted result.
+not treat a low score as permission to redraw the whole image. A repair is
+automatically durable eval evidence when the local source/output pair and exact
+prompt are available. A score does not overwrite that immutable trace.

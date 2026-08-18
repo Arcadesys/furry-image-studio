@@ -19,11 +19,11 @@ Return a new generated image that follows one character profile, one style profi
 6. Use pure generation unless the user provided an image to edit or preserve.
 7. Validate for character identity, style match, anatomy, accessories, physical integration, and authorship hierarchy.
 8. Curate: keep only a result that passes the authorship test; identify one specific repair if it is close, otherwise treat it as a sketch.
-9. When the user explicitly requested eval mode and generation used a visual
-   character, pose, or composition reference, use `record-eval-trace` after
-   accepting the result. Pass that actual reference as source, the generated
-   local file as output, and the exact composed image prompt. Never use the
-   output as its own source.
+9. Automatically use `record-eval-trace` after every produced result when a
+   visual character, pose, or composition reference actually participated. Pass
+   that actual reference as source, the generated local file as output, and the
+   exact composed image prompt. Never use the output as its own source. If no
+   genuine visual source exists, report `Eval: not recorded` with that reason.
 
 ## Prompt Skeleton
 
@@ -103,7 +103,8 @@ What is the single repair, if any?
 ```
 
 Use the named repair as the next repair pass; do not guess a redesign from a
-low score. The scorecard is conversational feedback, not an eval trace. Record
-an immutable eval only when the user explicitly asks for eval mode or for the
-accepted result to be added to the eval set. Skip the scorecard only when the
-user explicitly asks not to review the image.
+low score. The scorecard is conversational feedback; automatic recording has
+already created a trace when evidence was available. Include the trace receipt
+with the image response. Skip the scorecard only when the user explicitly asks
+not to review the image; do not skip automatic recording unless they explicitly
+opt out.

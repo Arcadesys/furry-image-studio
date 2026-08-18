@@ -80,10 +80,11 @@ Acting, and Integration; a repair uses “did it fix the named defect?” plus o
 repair score. Each is scored 1–5, followed by one requested repair at most.
 
 These scores guide immediate repair and reveal which rubric criteria deserve
-more weight or clearer definitions. They are **not** automatically saved as an
-immutable eval trace: record only an accepted result the creator explicitly
-asks to add to the eval set, with actual source, output, and exact prompt
-evidence.
+more weight or clearer definitions. Automatic recording is enabled: every
+recordable output is copied into one immutable trace before its scorecard.
+Scores never overwrite the recorded evidence. A text-only generation with no
+genuine visual source remains explicitly unrecordable in v1; record that
+limitation instead of fabricating a source.
 
 ## Small, useful eval set
 

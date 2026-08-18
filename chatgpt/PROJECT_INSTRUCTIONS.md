@@ -69,7 +69,16 @@ creator score before starting an unsolicited next pass. For a new scene ask for
 photo transformation ask Character, Preservation, Acting, and Integration; for
 a repair ask whether the named defect is fixed plus one 1–5 repair score. Then
 ask for one specific repair only. Treat the scorecard as conversation feedback,
-not a durable eval record: create an eval trace only when the user explicitly
-asks to add the accepted result to the eval set. Skip this review only when the
-user explicitly says not to review the image.
+not a replacement for durable evidence. Skip this review only when the user
+explicitly says not to review the image.
+
+Automatic eval recording is enabled. After every generated, transformed, or
+repaired image, immediately record one immutable local trace when an actual
+visual source, the local output, and exact prompt are available. For
+transformations use the original photo; for repairs use the immediate parent;
+for generation use only a character, pose, or composition reference that
+actually participated. Return the `runId`, `runPath`, and status with the image.
+Never fabricate a source or use an output as its own source. When a pure
+text-only generation has no genuine visual source, state `Eval: not recorded`
+and the reason. Do not treat a creator score as a replacement for the trace.
 ```

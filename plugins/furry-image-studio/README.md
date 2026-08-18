@@ -226,6 +226,12 @@ the blind Codex judge is calibrated. See
 [the eval protocol](evals/EVAL_PROTOCOL.md) for the small-set recipe, evidence
 rules, and review-to-judge flow.
 
+Automatic recording is enabled for Furry Image Studio outputs. Every output
+with a genuine visual source, local output file, and exact prompt is recorded
+immediately; transformations use their original photo and repairs use their
+immediate parent. Pure text-only generations remain explicitly unrecordable in
+the v1 paired reviewer rather than receiving a fabricated source.
+
 ## Create a character
 
 ```bash

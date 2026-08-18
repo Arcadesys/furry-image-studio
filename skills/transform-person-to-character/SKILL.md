@@ -19,10 +19,10 @@ Return an edited image where only the selected subject is transformed into the s
 6. Label every input image role: edit target, character reference, style reference, pose reference, or composition reference.
 7. Compose the prompt from: use case, primary goal, image roles, character lock, style lock, physical-integration requirements, preserve, change only, avoid.
 8. Validate the result against the source image and selected profiles. Regenerate if the background, crop, text, objects, other people, perspective, occlusion, or object contact drift.
-9. When the user explicitly requested eval mode, use `record-eval-trace` after
-   accepting the result. Pass the original photo as source, the generated local
-   file as output, and the exact composed image prompt. Do not record ordinary
-   transformations.
+9. Automatically use `record-eval-trace` after every produced transformation.
+   Pass the original photo as source, the generated local file as output, and
+   the exact composed image prompt. Return the trace receipt with the image;
+   never silently skip a recording failure.
 
 ## Prompt Skeleton
 
@@ -99,7 +99,7 @@ Score this 1–5 (or say “pass”):
 What is the single repair, if any?
 ```
 
-Treat the named repair as a localized edit. Do not create an eval trace from a
-score alone; record only on the user's explicit eval request. Skip this only if
-the user explicitly asks not to review the image.
+Treat the named repair as a localized edit. The transformation output was
+already automatically recorded; scores do not alter or overwrite that evidence.
+Skip this only if the user explicitly asks not to review the image.
 - The visible reality/cartoon contrast is intentional.

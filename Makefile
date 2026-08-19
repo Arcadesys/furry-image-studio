@@ -1,6 +1,9 @@
-.PHONY: test plugin-test workspace-deps eval-recorder-test judge-test service-test
+.PHONY: test sync-release plugin-test workspace-deps eval-recorder-test judge-test service-test
 
 test: plugin-test eval-recorder-test judge-test service-test
+
+sync-release:
+	python3 scripts/sync_release.py
 
 plugin-test:
 	python3 scripts/test_plugin.py

@@ -153,6 +153,17 @@ implementation used by an installed plugin. `python3 scripts/test_plugin.py`
 verifies that the mirrored files stay identical and that both recorder entry
 points expose the same CLI, so a change cannot silently split their behavior.
 
+After editing a canonical mirrored path, synchronize the installable package
+before committing:
+
+```bash
+make sync-release
+```
+
+Commit the root and packaged copies together. The sync command copies only
+`README.md`, `.codex-plugin/`, `assets/`, and `skills/`; it deliberately leaves
+the distinct recorder scripts alone.
+
 ### Profiles and skills
 
 - `assets/characters/<id>/character.md` defines one character's identity:
@@ -192,6 +203,7 @@ The full repository check uses only Python's standard library plus the
 committed Node lockfile:
 
 ```bash
+make sync-release
 make test
 ```
 
